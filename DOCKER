@@ -1,0 +1,32 @@
+import os 
+print("lets start docker")
+print("to install docker press 1 ")
+print("to run docker press 2")
+print(" to check status of docker press 3")
+print(" to install images of docker press 4")
+print(" to check images of docker press 5")
+print(" to run container top of docker press 6")
+print("to install python top of conatiner press 7")
+print(" to run python  top of container press 8")
+print("please enter your choice ",end='')
+i = int(input())
+if i == 1:
+   os.system("dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo")
+   os.system("dnf install docker-ce --nobest -y")
+elif i==2:
+   os.system("systemctl start docker")
+elif i==3:
+   os.system("systemctl status docker")
+elif i==4:
+   x=input("enter os name ")   
+   os.system("docker pull {}".format(x))
+elif i==5:
+   os.system("docker images")
+elif i==6:
+   y=input("enter conatiner os name ")
+   z=input("enter conatiner os name ")
+   os.system("docker run -it --name {} {}",format(y,z))
+elif i==7:
+   os.system("yum install python3")
+elif i==8:
+   os.system("python3")
