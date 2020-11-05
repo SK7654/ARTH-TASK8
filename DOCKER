@@ -25,7 +25,7 @@ elif i==5:
 elif i==6:
    y=input("enter conatiner os name ")
    z=input("enter conatiner os name ")
-   os.system("docker run -it --name {} {}",format(y,z))
+   os.system("docker run -it --name {} {}".format(y,z))
 elif i==7:
    os.system("yum install python3")
 elif i==8:
